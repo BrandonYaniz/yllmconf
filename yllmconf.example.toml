@@ -1,0 +1,29 @@
+data_dir = "/var/db/yllmconf"
+change_dir = "/var/db/yllmconf/changes"
+documentation_dir = "/var/db/yllmconf/docs"
+profile_dir = "/usr/local/share/yllmconf/profiles"
+
+[yllmd]
+socket = "/var/run/yllmd/yllmd.sock"
+model_type = "llm"
+level = "balanced"
+
+[behavior]
+require_confirmation = true
+preserve_metadata = true
+use_utc_timestamps = true
+allow_service_start = true
+allow_service_reload = true
+allow_service_restart = true
+automatic_rollback = false
+
+[documentation]
+discover_manpages = true
+discover_package_docs = true
+discover_samples = true
+allow_user_imports = true
+
+[verification]
+default_timeout_seconds = 30
+default_stabilization_seconds = 5
+retain_raw_logs = true

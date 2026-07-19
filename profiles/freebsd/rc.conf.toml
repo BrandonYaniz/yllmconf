@@ -1,0 +1,14 @@
+id = "freebsd-rc-conf"
+display_name = "FreeBSD rc.conf"
+
+[platform]
+os = "freebsd"
+config_paths = ["/etc/rc.conf", "/etc/rc.conf.local"]
+
+[discovery]
+manpages = ["rc.conf", "service", "rc"]
+sample_patterns = ["/etc/defaults/rc.conf"]
+
+[service]
+supports_reload = false
+supports_restart = false

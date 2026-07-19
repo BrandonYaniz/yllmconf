@@ -1,0 +1,25 @@
+id = "nginx"
+display_name = "nginx"
+
+[platform]
+os = "freebsd"
+package = "nginx"
+service_manager = "freebsd-rc"
+service_name = "nginx"
+config_paths = ["/usr/local/etc/nginx/nginx.conf"]
+
+[discovery]
+manpages = ["nginx"]
+sample_patterns = ["/usr/local/etc/nginx/*.dist", "/usr/local/etc/nginx/*.sample"]
+
+[validation]
+executable = "/usr/local/sbin/nginx"
+arguments = ["-t", "-c", "{staged_file}"]
+
+[service]
+preferred_action = "reload"
+supports_reload = true
+supports_restart = true
+
+[logs]
+paths = ["/var/log/nginx/error.log", "/var/log/messages"]

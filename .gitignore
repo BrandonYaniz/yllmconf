@@ -1,0 +1,20 @@
+.codex/
+
+# Build output
+bin/
+dist/
+yllmconf
+*.test
+coverage.out
+
+# Runtime state
+*.db
+*.db-shm
+*.db-wal
+
+# Editor and OS files
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
